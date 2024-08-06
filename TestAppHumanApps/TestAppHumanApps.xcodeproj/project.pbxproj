@@ -9,20 +9,14 @@
 /* Begin PBXBuildFile section */
 		BC89E08D2C6209F100ED9FA9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC89E08C2C6209F100ED9FA9 /* AppDelegate.swift */; };
 		BC89E08F2C6209F100ED9FA9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC89E08E2C6209F100ED9FA9 /* SceneDelegate.swift */; };
-		BC89E0912C6209F100ED9FA9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC89E0902C6209F100ED9FA9 /* ViewController.swift */; };
-		BC89E0942C6209F100ED9FA9 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = BC89E0932C6209F100ED9FA9 /* Base */; };
 		BC89E0962C6209F300ED9FA9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BC89E0952C6209F300ED9FA9 /* Assets.xcassets */; };
-		BC89E0992C6209F300ED9FA9 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = BC89E0982C6209F300ED9FA9 /* Base */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		BC89E0892C6209F100ED9FA9 /* TestAppHumanApps.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TestAppHumanApps.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BC89E08C2C6209F100ED9FA9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BC89E08E2C6209F100ED9FA9 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		BC89E0902C6209F100ED9FA9 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		BC89E0932C6209F100ED9FA9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		BC89E0952C6209F300ED9FA9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		BC89E0982C6209F300ED9FA9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BC89E09A2C6209F300ED9FA9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -56,15 +50,52 @@
 		BC89E08B2C6209F100ED9FA9 /* TestAppHumanApps */ = {
 			isa = PBXGroup;
 			children = (
-				BC89E08C2C6209F100ED9FA9 /* AppDelegate.swift */,
-				BC89E08E2C6209F100ED9FA9 /* SceneDelegate.swift */,
-				BC89E0902C6209F100ED9FA9 /* ViewController.swift */,
-				BC89E0922C6209F100ED9FA9 /* Main.storyboard */,
-				BC89E0952C6209F300ED9FA9 /* Assets.xcassets */,
-				BC89E0972C6209F300ED9FA9 /* LaunchScreen.storyboard */,
+				BC89E0A02C620A4A00ED9FA9 /* AppDelegate */,
+				BC89E0A12C620A5700ED9FA9 /* Resource */,
+				BC89E0A22C620A5F00ED9FA9 /* AppConstants */,
+				BC89E0A32C620A7000ED9FA9 /* Common */,
+				BC89E0A42C620A7500ED9FA9 /* Modules */,
 				BC89E09A2C6209F300ED9FA9 /* Info.plist */,
 			);
 			path = TestAppHumanApps;
+			sourceTree = "<group>";
+		};
+		BC89E0A02C620A4A00ED9FA9 /* AppDelegate */ = {
+			isa = PBXGroup;
+			children = (
+				BC89E08C2C6209F100ED9FA9 /* AppDelegate.swift */,
+				BC89E08E2C6209F100ED9FA9 /* SceneDelegate.swift */,
+			);
+			path = AppDelegate;
+			sourceTree = "<group>";
+		};
+		BC89E0A12C620A5700ED9FA9 /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				BC89E0952C6209F300ED9FA9 /* Assets.xcassets */,
+			);
+			path = Resource;
+			sourceTree = "<group>";
+		};
+		BC89E0A22C620A5F00ED9FA9 /* AppConstants */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = AppConstants;
+			sourceTree = "<group>";
+		};
+		BC89E0A32C620A7000ED9FA9 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		BC89E0A42C620A7500ED9FA9 /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Modules;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -126,8 +157,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				BC89E0962C6209F300ED9FA9 /* Assets.xcassets in Resources */,
-				BC89E0992C6209F300ED9FA9 /* Base in Resources */,
-				BC89E0942C6209F100ED9FA9 /* Base in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -138,32 +167,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BC89E0912C6209F100ED9FA9 /* ViewController.swift in Sources */,
 				BC89E08D2C6209F100ED9FA9 /* AppDelegate.swift in Sources */,
 				BC89E08F2C6209F100ED9FA9 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXVariantGroup section */
-		BC89E0922C6209F100ED9FA9 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				BC89E0932C6209F100ED9FA9 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		BC89E0972C6209F300ED9FA9 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				BC89E0982C6209F300ED9FA9 /* Base */,
-			);
-			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		BC89E09B2C6209F300ED9FA9 /* Debug */ = {
@@ -307,9 +316,13 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = CineSeeker.TestAppHumanApps;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -335,9 +348,13 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = CineSeeker.TestAppHumanApps;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
