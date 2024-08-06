@@ -76,9 +76,11 @@ extension Main {
 
             let panGesture = UIPanGestureRecognizer(target: self, action: #selector(handlePanGesture(_:)))
             let pinchGesture = UIPinchGestureRecognizer(target: self, action: #selector(handlePinchGesture(_:)))
+            let rotationGesture = UIRotationGestureRecognizer(target: self, action: #selector(handleRotationGesture(_:)))
             
             imageView.addGestureRecognizer(panGesture)
             imageView.addGestureRecognizer(pinchGesture)
+            imageView.addGestureRecognizer(rotationGesture)
         }
         
         private func layoutSubviews() {
@@ -151,6 +153,16 @@ extension Main {
             if gesture.state == .began || gesture.state == .changed {
                 viewToZoom.transform = viewToZoom.transform.scaledBy(x: gesture.scale, y: gesture.scale)
                 gesture.scale = 1.0
+            }
+        }
+        
+        @objc 
+        private func handleRotationGesture(_ gesture: UIRotationGestureRecognizer) {
+            guard let viewToRotate = gesture.view else { return }
+            
+            if gesture.state == .began || gesture.state == .changed {
+                viewToRotate.transform = viewToRotate.transform.rotated(by: gesture.rotation)
+                gesture.rotation = 0
             }
         }
     }
