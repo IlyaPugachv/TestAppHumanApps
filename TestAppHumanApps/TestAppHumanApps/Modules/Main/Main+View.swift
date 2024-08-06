@@ -11,6 +11,8 @@ extension Main {
         // MARK: - Subviews -
         
         private let plusButton: UIButton = .init()
+        private let segmentControl: UISegmentedControl = .init(items: ["Option 1", "Option 2"])
+        private let saveButton: UIButton = .init()
         private let frameView: UIView = .init()
         private let imageContainerView: UIView = .init()
         private let imageView: UIImageView = .init()
@@ -54,26 +56,35 @@ extension Main {
             view.backgroundColor = .white
             
             view.addView(plusButton)
+            view.addView(segmentControl)
+            view.addView(saveButton)
             view.addView(frameView)
             frameView.addView(imageContainerView)
             imageContainerView.addView(imageView)
         }
         
         private func configureSubviews() {
-    
+            
             plusButton.configureButton(
                 systemImageName: "plus",
                 tintColor: .black
             )
             
+            segmentControl.selectedSegmentIndex = 0
+            
+            saveButton.configureButton(
+                systemImageName: "tray.and.arrow.down",
+                tintColor: .black
+            )
+            
             frameView.layer.borderColor = UIColor.yellow.cgColor
             frameView.layer.borderWidth = 3
-
+            
             imageContainerView.clipsToBounds = true
-
+            
             imageView.contentMode = .scaleAspectFit
             imageView.isUserInteractionEnabled = true
-
+            
             let panGesture = UIPanGestureRecognizer(target: self, action: #selector(handlePanGesture(_:)))
             let pinchGesture = UIPinchGestureRecognizer(target: self, action: #selector(handlePinchGesture(_:)))
             let rotationGesture = UIRotationGestureRecognizer(target: self, action: #selector(handleRotationGesture(_:)))
@@ -89,7 +100,16 @@ extension Main {
                 plusButton.leadingAnchor.constraint(equalTo: safeArea.leadingAnchor, constant: 12),
                 plusButton.heightAnchor.constraint(equalToConstant: 45),
                 plusButton.widthAnchor.constraint(equalToConstant: 45),
-               
+                
+                saveButton.topAnchor.constraint(equalTo: safeArea.topAnchor, constant: 5),
+                saveButton.trailingAnchor.constraint(equalTo: safeArea.trailingAnchor, constant: -12),
+                saveButton.heightAnchor.constraint(equalToConstant: 45),
+                saveButton.widthAnchor.constraint(equalToConstant: 45),
+                
+                segmentControl.centerYAnchor.constraint(equalTo: plusButton.centerYAnchor),
+                segmentControl.leadingAnchor.constraint(equalTo: plusButton.trailingAnchor, constant: 10),
+                segmentControl.trailingAnchor.constraint(equalTo: saveButton.leadingAnchor, constant: -10),
+                segmentControl.heightAnchor.constraint(equalToConstant: 30),
                 frameView.topAnchor.constraint(equalTo: safeArea.topAnchor, constant: 60),
                 frameView.leadingAnchor.constraint(equalTo: safeArea.leadingAnchor, constant: 12),
                 frameView.trailingAnchor.constraint(equalTo: safeArea.trailingAnchor, constant: -12),
@@ -106,11 +126,11 @@ extension Main {
         }
         
         private func setupActions() {
-            plusButton.addTarget(self, 
+            plusButton.addTarget(self,
                                  action: #selector(didTapPlusButton),
                                  for: .touchUpInside)
         }
-    
+        
         func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
             picker.dismiss(animated: true, completion: nil)
             
@@ -123,7 +143,7 @@ extension Main {
         func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
             picker.dismiss(animated: true, completion: nil)
         }
-
+        
         // MARK: - Gesture Handlers -
         
         @objc
@@ -134,7 +154,7 @@ extension Main {
             present(imagePickerController, animated: true, completion: nil)
         }
         
-        @objc 
+        @objc
         private func handlePanGesture(_ gesture: UIPanGestureRecognizer) {
             guard let viewToMove = gesture.view else { return }
             
@@ -146,7 +166,7 @@ extension Main {
             }
         }
         
-        @objc 
+        @objc
         private func handlePinchGesture(_ gesture: UIPinchGestureRecognizer) {
             guard let viewToZoom = gesture.view else { return }
             
@@ -156,7 +176,7 @@ extension Main {
             }
         }
         
-        @objc 
+        @objc
         private func handleRotationGesture(_ gesture: UIRotationGestureRecognizer) {
             guard let viewToRotate = gesture.view else { return }
             
