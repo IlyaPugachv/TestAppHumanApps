@@ -9,8 +9,7 @@ extension Settings {
         private lazy var safeArea = self.view.safeAreaLayoutGuide
         
         // MARK: - Subviews -
-       
-       
+              
         // MARK: - Initializers -
         
         public init(with presenter: Presenter) {
@@ -48,6 +47,8 @@ extension Settings {
         
         private func buildHierarchy() {
             view.backgroundColor = .white
+            
+            
         }
         
         private func configureSubviews() {

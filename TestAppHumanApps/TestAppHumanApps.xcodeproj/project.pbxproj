@@ -19,6 +19,7 @@
 		BC89E0B62C620BFA00ED9FA9 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC89E0B52C620BFA00ED9FA9 /* SettingsView.swift */; };
 		BC89E0B92C620C5300ED9FA9 /* UIViewController+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC89E0B82C620C5300ED9FA9 /* UIViewController+Extensions.swift */; };
 		BC89E0BB2C62100A00ED9FA9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BC89E0BA2C62100A00ED9FA9 /* LaunchScreen.storyboard */; };
+		BC89E0BD2C62113F00ED9FA9 /* UIView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC89E0BC2C62113F00ED9FA9 /* UIView+Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +37,7 @@
 		BC89E0B52C620BFA00ED9FA9 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		BC89E0B82C620C5300ED9FA9 /* UIViewController+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extensions.swift"; sourceTree = "<group>"; };
 		BC89E0BA2C62100A00ED9FA9 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
+		BC89E0BC2C62113F00ED9FA9 /* UIView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extensions.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -145,6 +147,7 @@
 			isa = PBXGroup;
 			children = (
 				BC89E0B82C620C5300ED9FA9 /* UIViewController+Extensions.swift */,
+				BC89E0BC2C62113F00ED9FA9 /* UIView+Extensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -229,6 +232,7 @@
 				BC89E0AE2C620BC400ED9FA9 /* Main+View.swift in Sources */,
 				BC89E0AC2C620BB700ED9FA9 /* Main+Presenter.swift in Sources */,
 				BC89E0B22C620BDE00ED9FA9 /* Settings+Presenter.swift in Sources */,
+				BC89E0BD2C62113F00ED9FA9 /* UIView+Extensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
